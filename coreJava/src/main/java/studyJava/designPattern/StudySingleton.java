@@ -73,4 +73,19 @@ public class StudySingleton {
 		return singleton;
 	}
 	
+	
+	enum Singleton{
+		INSTANCE;
+		
+		private StudySingleton singleTon;
+		
+		private Singleton(){
+			singleTon = new StudySingleton();
+		}
+		
+		public StudySingleton getSingleTon(){
+			return singleTon;
+		}
+	}
+	
 }
