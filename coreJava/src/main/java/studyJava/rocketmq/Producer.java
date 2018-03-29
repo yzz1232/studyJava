@@ -13,6 +13,7 @@ public class Producer {
 		DefaultMQProducer producer = new DefaultMQProducer("rmq-group");
 		producer.setNamesrvAddr("106.14.195.1:9876");
 		producer.setInstanceName("producer");
+		
 		producer.start();
 		try{
 			for (int i = 0; i < 10; i++) {
