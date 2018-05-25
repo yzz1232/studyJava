@@ -22,7 +22,9 @@ public class DynamicProxy implements InvocationHandler{
 	
 	public static void main(String[] args) {
 		
-		//Proxy.newProxyInstance
+		InvocationHandler handler = new DynamicProxy(new ChinesePerson());
+		Object object = Proxy.newProxyInstance(Thread.currentThread().getContextClassLoader(), new Class[]{Person.class}, handler);
+		System.out.println("223");
 	}
 
 }
