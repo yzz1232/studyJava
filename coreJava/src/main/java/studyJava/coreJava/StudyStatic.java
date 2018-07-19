@@ -20,6 +20,8 @@ public class StudyStatic {
 		StudyStatic.t();
 		StudyStatic s = new StudyStatic();
 		//s.t();
+		
+		//1111
 	}
 	
 }
