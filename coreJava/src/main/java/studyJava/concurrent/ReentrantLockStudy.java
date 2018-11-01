@@ -8,9 +8,14 @@ public class ReentrantLockStudy {
 	
 	public static void main(String[] args) {
 		
+		
 	
 		Runnable runable1 = ()->{ 
 			lock.lock(); 
+			lock.tryLock();
+			//lock.lockInterruptibly();
+			//lock.tryLock(timeout, unit)
+			
 			try {
 				Thread.sleep(3000L);
 				System.out.println("1213");

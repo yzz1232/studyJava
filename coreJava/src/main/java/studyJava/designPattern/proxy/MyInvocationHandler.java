@@ -27,7 +27,7 @@ public class MyInvocationHandler implements InvocationHandler{
       ((HelloWorld)object).sayHello();
       
       
-      Collection<Object>
+
 	}
 
 }
