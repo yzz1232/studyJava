@@ -8,13 +8,14 @@ import redis.clients.jedis.JedisPoolConfig;
 
 public class JedisStudy {
 	
-	static JedisPool jedisPool = new JedisPool(new JedisPoolConfig(), "daddress.redis.360fengdai.com", 6479,  5000, "22pBD7.dubbo", 6);
+	static JedisPool jedisPool = new JedisPool(new JedisPoolConfig(), "daddress.redis.360fengdai.com", 6479,  5000, "22pBD7.dubbo", 0);
 	static Jedis jedis = jedisPool.getResource();
 	
 	public static void main(String[] args) {
-		studyString();
-		studySet();
+		//studyString();
+		//studySet();
 		studyMap();
+		
 	}
 	
 	
@@ -61,15 +62,15 @@ public class JedisStudy {
 	public static void studyMap(){
 		
 		//保存
-		jedis.hset("user", "name", "zzy");
-		
-		jedis.hsetnx("user", "name", "zzy");
-		
-		//查找
-		jedis.hget("user", "name");
+//		jedis.hset("user", "name", "zzy");
+//		
+//		jedis.hsetnx("user", "name", "zzy");
+//		
+//		//查找
+//		jedis.hget("user", "name");
 		
 		//删除
-		jedis.hdel("user", "name");
+		System.out.println(jedis.hdel("loan:applyModelFieldConfig:cache", "selectValueMapByType-CertificationModel"));
 		
 	}
 	
